@@ -71,16 +71,16 @@
     <!-- Change the clue number below -->
     <h1>Clue X</h1>
     <!-- Change the riddle/question below -->
-    <p id="riddle">I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?</p>
+    <p id="riddle">01110010 01101110 01100001 01100100 01101111 01100111 This is not in order, reorder them to get the answer.</p>
     <input type="text" id="answer" placeholder="Type your answer here" autocomplete="off">
     <button onclick="checkAnswer()">Submit</button>
     <div id="result"></div>
   </div>
   <script>
     // Change the correct answer below (case-insensitive)
-    const correctAnswer = "echo";
+    const correctAnswer = "dragon";
     // Change the next clue location below
-    const nextClue = "the big oak tree";
+    const nextClue = "We often go here to buy some tea !!";
 
     function checkAnswer() {
       const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
