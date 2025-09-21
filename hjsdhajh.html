@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clue X</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+    }
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 24px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    input[type="text"] {
+      width: 90%;
+      padding: 16px;
+      font-size: 1.2rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    button {
+      width: 100%;
+      padding: 16px;
+      font-size: 1.2rem;
+      background: #0078d7;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #005fa3;
+    }
+    #result {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      min-height: 2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Change the clue number below -->
+    <h1>Clue X</h1>
+    <!-- Change the riddle/question below -->
+    <p id="riddle">I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?</p>
+    <input type="text" id="answer" placeholder="Type your answer here" autocomplete="off">
+    <button onclick="checkAnswer()">Submit</button>
+    <div id="result"></div>
+  </div>
+  <script>
+    // Change the correct answer below (case-insensitive)
+    const correctAnswer = "echo";
+    // Change the next clue location below
+    const nextClue = "the big oak tree";
+
+    function checkAnswer() {
+      const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+      const resultDiv = document.getElementById('result');
+      if (userAnswer === correctAnswer.toLowerCase()) {
+        resultDiv.textContent = `✅ Correct! Next QR is at ${nextClue}.`;
+        resultDiv.style.color = '#007800';
+      } else {
+        resultDiv.textContent = '❌ Try again!';
+        resultDiv.style.color = '#d70000';
+      }
+    }
+  </script>
+</body>
+</html>
