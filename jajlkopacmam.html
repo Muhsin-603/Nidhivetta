@@ -71,16 +71,16 @@
     <!-- Change the clue number below -->
     <h1>Clue 7</h1>
     <!-- Change the riddle/question below -->
-    <p id="riddle">I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?</p>
+    <p id="riddle">I can be cracked, made, told, and played. What am I?</p>
     <input type="text" id="answer" placeholder="Type your answer here" autocomplete="off">
     <button onclick="checkAnswer()">Submit</button>
     <div id="result"></div>
   </div>
   <script>
     // Change the correct answer below (case-insensitive)
-    const correctAnswer = "echo";
+    const correctAnswer = "joke";
     // Change the next clue location below
-    const nextClue = "Come to front";
+    const nextClue = "I have paint but no brushes.<br>I have lines but draw no pictures.<br>People shoot at my baskets but never use a weapon.<br>My floor echoes with squeaks and the roar of a crowd.<br>What am I?";
 
     function checkAnswer() {
       const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
