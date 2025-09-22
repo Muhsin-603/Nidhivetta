@@ -68,26 +68,22 @@
 </head>
 <body>
   <div class="container">
-    <!-- Change the clue number below -->
     <h1>Clue 5</h1>
-    <!-- Change the riddle/question below -->
-    <p id="riddle">I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?</p>
+    <p id="riddle">I have cities but no houses, forests but no trees, and rivers but no water. What am I?</p>
     <input type="text" id="answer" placeholder="Type your answer here" autocomplete="off">
     <button onclick="checkAnswer()">Submit</button>
     <div id="result"></div>
   </div>
   <script>
-    // Change the correct answer below (case-insensitive)
-    const correctAnswer = "echo";
-    // Change the next clue location below
-    const nextClue = "the big oak tree";
+    // Correct answer (case-insensitive)
+    const correctAnswer = "map";
 
     function checkAnswer() {
       const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
       const resultDiv = document.getElementById('result');
       if (userAnswer === correctAnswer.toLowerCase()) {
-        resultDiv.textContent = `✅ Correct! Next QR is at ${nextClue}.`;
-        resultDiv.style.color = '#007800';
+        // Only display the image, no text
+        resultDiv.innerHTML = `<img src="clue5.jpg" alt="You've found the clue!" style="max-width:100%;height:auto;margin:1em 0;">`;
       } else {
         resultDiv.textContent = '❌ Try again!';
         resultDiv.style.color = '#d70000';
