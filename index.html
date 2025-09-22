@@ -3,18 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <title>You've Been Fooled!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background: #222;
       color: #fff;
       font-family: 'Segoe UI', Arial, sans-serif;
       text-align: center;
-      margin-top: 10%;
+      margin-top: 10vh;
+      padding: 0 1em;
+      box-sizing: border-box;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 2em;
     }
     .loop-text {
       margin-top: 2em;
       font-size: 1.5em;
       animation: loopFade 2s infinite;
+      word-break: break-word;
     }
     @keyframes loopFade {
       0% { opacity: 0; }
@@ -31,9 +43,41 @@
       color: #fff;
       border-radius: 8px;
       transition: background 0.2s;
+      box-sizing: border-box;
+      width: auto;
+      max-width: 90vw;
     }
     .button:hover {
       background: #ff2222;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
+      .loop-text {
+        font-size: 1.1em;
+      }
+      .button {
+        font-size: 0.95em;
+        padding: 0.6em 1em;
+      }
+      body {
+        margin-top: 5vh;
+      }
+    }
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 1.3em;
+      }
+      .button {
+        font-size: 0.9em;
+        padding: 0.5em 0.5em;
+      }
     }
   </style>
 </head>
