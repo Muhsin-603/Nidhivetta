@@ -1,1 +1,58 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>You've Been Fooled!</title>
+  <style>
+    body {
+      background: #222;
+      color: #fff;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      text-align: center;
+      margin-top: 10%;
+    }
+    .loop-text {
+      margin-top: 2em;
+      font-size: 1.5em;
+      animation: loopFade 2s infinite;
+    }
+    @keyframes loopFade {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+    .button {
+      margin-top: 2em;
+      padding: 0.7em 2em;
+      font-size: 1em;
+      cursor: pointer;
+      border: none;
+      background: #ff4444;
+      color: #fff;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .button:hover {
+      background: #ff2222;
+    }
+  </style>
+</head>
+<body>
+  <h1>You're Fooled, Guys!</h1>
+  <p>It looks like you've been tricked.<br>
+    Try clicking the button below to see what happens.</p>
+  <button class="button" onclick="foolLoop()">Get Out of the Loop</button>
+  <div class="loop-text" id="loopText">Looping... You can't escape!</div>
+  <script>
+    let fooled = 0;
+    function foolLoop() {
+      fooled++;
+      document.getElementById('loopText').textContent =
+        `Still looping... Attempt #${fooled}. You can't escape!`;
+      setTimeout(() => {
+        alert("Fooled again! Try as you might, the loop continues...");
+      }, 500);
+    }
+  </script>
+</body>
+</html>
